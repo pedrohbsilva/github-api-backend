@@ -1,0 +1,22 @@
+{
+  "name": "github-api-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pedrohbsilva/github-api-backend.git",
+  "author": "pedro <phbs1235@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --ignore-watch node_modules src/server.ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.10",
+    "cors": "^2.8.5",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}
