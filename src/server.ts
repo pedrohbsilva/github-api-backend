@@ -22,7 +22,7 @@ app.use(helmet());
 app.use(limiter);
 
 app.disable('x-powered-by');
-app.use(cors({origin: 'https://github-api-app-consult.netlify.app/'}));
+app.use(cors({origin: 'https://github-api-app-consult.netlify.app'}));
 app.use(express.json());
 
 app.use(bodyParser.json());
