@@ -11,13 +11,12 @@ class Session {
 
     const clientId = process.env.GITHUB_CLIENT_ID;
     const clientSecret = process.env.GITHUB_CLIENT_SECRET;
-
     const body = {
       client_id: clientId,
       client_secret: clientSecret,
       code: request.params.code
     };
-
+    console.log(body)
     const opts = { headers: { accept: 'application/json' } };
     try {
       const info = await axios.post(`https://github.com/login/oauth/access_token`, body, opts)
