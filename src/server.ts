@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { routes } from './routes';
+import { routes } from './routes/index';
 import bodyParser from 'body-parser'
 import rateLimit from 'express-rate-limit'
 import helmet from 'helmet' 

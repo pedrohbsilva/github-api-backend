@@ -5,13 +5,8 @@ class Users {
   async getAllUsers(request: Request, response: Response) {
     const { since } = request.query;
 
-    const token = request.headers.authorization;
-
-    const config = { headers: { accept: 'application/json', authorization: `token ${token}` } };
-
-    
     try {
-      const info = await api.get(`/users?since=${since}`, config)
+      const info = await api.get(`/users?since=${since}`)
       
       return response.status(200).json({message: info.data});
     } catch (error) {
@@ -22,11 +17,9 @@ class Users {
   async details(request: Request, response: Response) {
 
     const { username } = request.params;
-    const token = request.headers.authorization;
-
-    const config = { headers: { accept: 'application/json', authorization: `token ${token}` } };
+   
     try {
-      const info = await api.get(`/users/${username}`, config)
+      const info = await api.get(`/users/${username}`)
       
       return response.status(200).json({message: info.data});
     } catch (error) {
@@ -37,11 +30,9 @@ class Users {
   async repos(request: Request, response: Response) {
 
     const { username } = request.params;
-    const token = request.headers.authorization;
-
-    const config = { headers: { accept: 'application/json', authorization: `token ${token}` } };
+    
     try {
-      const info = await api.get(`/users/${username}/repos`, config)
+      const info = await api.get(`/users/${username}/repos`)
       
       return response.status(200).json({message: info.data});
     } catch (error) {
