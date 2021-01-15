@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-
 class Session {
 
   async login(request: Request, response: Response) {
